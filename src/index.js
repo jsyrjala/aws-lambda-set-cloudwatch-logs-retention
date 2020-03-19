@@ -72,7 +72,7 @@ async function PutLogGroupRetentionPolicy(logGroupName, retentionInDays) {
     retentionInDays: retentionInDays
   };
   
-  debugMessage(`Calling cloudwatchlogs.describeLogGroups(${JSON.stringify(params)})`);
+  debugMessage(`Calling cloudwatchlogs.putRetentionPolicy(${JSON.stringify(params)})`);
   await cloudwatchlogs.putRetentionPolicy(params).promise();
 
 }
